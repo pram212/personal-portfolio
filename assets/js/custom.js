@@ -9,11 +9,11 @@ function typedInit(strings, element) {
 }
 
 // get biodata
-axios.get('http://cms.monoport.web.id/api/biodata')
+axios.get('https://cms.monoport.web.id/api/biodata')
     .then(function (response) {
         const biodata = response.data
 
-        $("#bio-foto").attr("src", `http://cms.monoport.web.id/${biodata.foto}`);
+        $("#bio-foto").attr("src", `https://cms.monoport.web.id/${biodata.foto}`);
         $("#bio-nama").append(`<span>${biodata.nama}</span>`);
         $("#bio-profil").append(`<span>${biodata.profil}</span>`);
         $("#bio-lulusan").append(`<span>${biodata.lulusan}</span>`);
@@ -27,7 +27,7 @@ axios.get('http://cms.monoport.web.id/api/biodata')
     })
 
 // get kontak
-axios.get('http://cms.monoport.web.id/api/kontak')
+axios.get('https://cms.monoport.web.id/api/kontak')
     .then(function (response) {
         const kontak = response.data
         $("#alamat").append(`${kontak.alamat}`)
@@ -41,7 +41,7 @@ axios.get('http://cms.monoport.web.id/api/kontak')
     });
 
 // get skill
-axios.get('http://cms.monoport.web.id/api/skill')
+axios.get('https://cms.monoport.web.id/api/skill')
     .then(function (response) {
         const skills = response.data
         $.each(skills, function (indexInArray, skill) {
@@ -58,7 +58,7 @@ axios.get('http://cms.monoport.web.id/api/skill')
     });
 
 // get portfolio
-axios.get('http://cms.monoport.web.id/api/portfolio')
+axios.get('https://cms.monoport.web.id/api/portfolio')
     .then(function (response) {
         const portfolios = response.data
 
@@ -69,7 +69,7 @@ axios.get('http://cms.monoport.web.id/api/portfolio')
                     <div class="work-box">
                         <a href="#" data-gallery="portfolioGallery" class="portfolio-lightbox">
                             <div class="work-img">
-                                <img src="http://cms.monoport.web.id/${portfolio.image_url[0]}" alt="" class="img-fluid">
+                                <img src="https://cms.monoport.web.id/${portfolio.image_url[0]}" alt="" class="img-fluid">
                             </div>
                         </a>
                         <div class="work-content">

@@ -207,7 +207,7 @@
           const params = new URLSearchParams(url.search)
           const idPorto = params.get('id')
 
-          axios.get('http://cms.monoport.web.id/api/portfolio/' + idPorto)
+          axios.get('https://cms.monoport.web.id/api/portfolio/' + idPorto)
             .then(response => {
               this.portfolio = response.data
             })
